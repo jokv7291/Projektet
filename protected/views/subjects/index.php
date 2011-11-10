@@ -12,6 +12,7 @@
 <?php $form=$this->beginWidget('CActiveForm', array(
 	'id'=>'subjects-subjects-form',
 	'enableAjaxValidation'=>true,
+	//'action'=>array('subjects/create'),
 )); ?>
 
 	<p class="note">Fields with <span class="required">*</span> are required.</p>
@@ -20,19 +21,19 @@
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'subject_name'); ?>
-		<?php echo $form->textField($model,'subject_name', array('value'=>'')); ?>
+		<?php echo $form->textField($model,'subject_name'); ?>
 		<?php echo $form->error($model,'subject_name'); ?>
 	</div>
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'subject_short'); ?>
-		<?php echo $form->textField($model,'subject_short', array('value'=>'')); ?>
+		<?php echo $form->textField($model,'subject_short'); ?>
 		<?php echo $form->error($model,'subject_short'); ?>
 	</div>
 
 
 	<div class="row buttons">
-		<?php echo CHtml::submitButton('Submit'); ?>
+		<?php echo CHtml::submitButton('Lägg till'); ?>
 	</div>
 
 <?php $this->endWidget(); ?>
@@ -45,13 +46,15 @@
 
 $this->widget('zii.widgets.grid.CGridView', array(
 	'id'=>'user-grid',
-	'dataProvider'=>$model->search(),
+	'dataProvider'=>$data->search(),
 	//'filter'=>$model,
 	'columns'=>array(
 		'subject_short',
 		'subject_name',
 		array(
 			'class'=>'CButtonColumn',	
+			'viewButtonOptions' => array('style'=>'visibility:hidden'),
+			
 			),
 	),
 )); ?>

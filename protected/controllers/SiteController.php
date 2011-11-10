@@ -32,30 +32,7 @@ class SiteController extends Controller
 		$this->render('index');
 	}
 	
-	public function actionSubjects()
-	{
-		$model = new Subjects;
-		$dataProvider = new CActiveDataProvider('Subjects');
-		if(isset($_POST['Subjects']))
-		{
-			$model->attributes=$_POST['Subjects'];
-			if($model->validate())
-			{
-				//lägg in i databas
-			
-				echo $model->save();
-				
-				unset($_POST['Subjects']);
-			}
-			
-		}
-		// renders the view file 'protected/views/site/index.php'
-		// using the default layout 'protected/views/layouts/main.php'
-		$this->render('subjects',array(
-			'model'=>$model,
-			'dataProvider'=>$dataProvider,
-			));
-	}
+
 	
 
 	/**
@@ -117,6 +94,9 @@ class SiteController extends Controller
 		// display the login form
 		$this->render('login',array('model'=>$model));
 	}
+
+
+	
 
 	/**
 	 * Logs out the current user and redirect to homepage.
