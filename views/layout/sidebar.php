@@ -2,8 +2,11 @@
         <h1>Sidebar</h1>
         <ul class="nav">
             <!-- display links for all categories -->
-            <li>
-                
+			<li>
+                <a href="index.php?r=home">Home<a>
+            </li>            
+			<li>
+                <a href="index.php?r=subjects">Subjects<a>
             </li>
         </ul>
     </div>
