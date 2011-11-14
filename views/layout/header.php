@@ -6,7 +6,7 @@
 		<title>Projektet</title>
 		<link rel="stylesheet" type="text/css" href="<?php echo $app_path ?>css/site.css" />
 		<script type="text/javascript" src="<?php echo $app_path ?>js/jquery-1.7.js"></script>
-				<script type="text/javascript" src="<?php echo $app_path ?>js/postit.js"></script>
+			
 	</head>
 	
 	<!-- the body section -->

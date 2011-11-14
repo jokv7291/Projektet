@@ -3,10 +3,10 @@
         <ul class="nav">
             <!-- display links for all categories -->
 			<li>
-                <a href="index.php?r=home">Home<a>
+                <a href="index.php?r=home">Home</a>
             </li>            
 			<li>
-                <a href="index.php?r=subjects">Subjects<a>
+                <a href="index.php?r=subjects">Subjects</a>
             </li>
         </ul>
     </div>

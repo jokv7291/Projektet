@@ -2,4 +2,6 @@
 include "views/layout/sidebar.php";
 ?>
 
-<?php include "views/layout/footer.php"; ?>
+<?php 
+echo "<script type=\"text/javascript\" src=\"".$app_path."js/subjects.js\"></script>";
+include "views/layout/footer.php"; ?>
