@@ -8,7 +8,7 @@
 	} catch (PDOException $e) {
 		$error_message = $e->getMessage();
 		echo $error_message;
-		//include('../errors/error.php');
+		include('errors/db_error.php');
 		exit();
 	}
 	

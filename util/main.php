@@ -14,14 +14,14 @@ set_include_path($doc_root . $app_path);
 //require_once('util/tags.php');
 require_once('models/database.php');
 
-/*
+
 // Define some common functions
 function display_db_error($error_message) {
     global $app_path;
     include 'errors/db_error.php';
     exit;
 }
-
+/*
 function display_error($error_message) {
     global $app_path;
     include 'errors/error.php';

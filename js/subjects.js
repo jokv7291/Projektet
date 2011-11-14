@@ -5,13 +5,18 @@ $(document).ready(function() {
 	var delete_fn = function(data) {
 		
 		var id = $(data).parent().parent().attr("id");
-		var aktion = "delete_product";
+		var aktion = "delete_subject";
 
-		console.log(data);
-	 	$.post("index.php", {
-	 		action: aktion, 
-	 		product_id: id	
-	 		});
+		console.log(id);
+		
+	 	$.post("controllers/SubjectsController.php", {
+	 	 		s: aktion, 
+	 	 		subject_id: id	
+	 	 		}, function(data2) {
+	 		
+	 				console.log(data2);
+	 		
+	 	});
 		$(data).parent().parent()
 			.find('td')
 	 		.wrapInner('<div style="display: block;" />')
@@ -22,21 +27,20 @@ $(document).ready(function() {
 			});
 	}
 
-	$('#add_product_form').submit(function() {
+	$('#add_subject_form').submit(function() {
 		
-		var kat = $('#category_id').val();
 		var kod = $('#code').val();
 		var namn = $('#name').val();
-		var pris = $('#price').val();
-		var aktion = "add_product";
+		var aktion = "add_subject";
+		
+		console.log(kod);
+		console.log(namn);
 		
 
-		$.post("index.php", { 
-		 	action: aktion, 
-		 	code: kod,
-		 	name: namn,
-		 	price: pris,
-		 	category_id: kat		
+		$.post("controllers/SubjectsController.php", { 
+		 	s: aktion, 
+		 	subject_short: kod,
+		 	subject_name: namn
 		 }, 
 		function(data) {
 			console.log(data);
@@ -45,7 +49,7 @@ $(document).ready(function() {
 			if (isNaN(data)) {
 				console.log(data);	
 			} else {
-				$('#table_list').append("<tr id=\""+data+"\"><td>"+kod+"</td><td>"+namn+"</td><td class=\"right\">"+pris+"</td><td><img class=\"delete\" src=\"../images/del.gif\"></td></tr>");
+				$('#table_list').append("<tr id=\""+data+"\"><td>"+kod+"</td><td>"+namn+"</td><td><img class=\"delete\" src=\"images/del.gif\"></td></tr>");
 				$('table td img.delete:last').bind({
 					click: function() {
 					delete_fn(this);
@@ -58,8 +62,7 @@ $(document).ready(function() {
 	
 				$('#code').val("");
 				$('#name').val("");
-				$('#price').val("");
-				$('#code').focus();
+				$('#name').focus();
 	
 	
 			}

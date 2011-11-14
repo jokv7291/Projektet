@@ -1,5 +1,7 @@
 <?php include "views/layout/header.php"; 
 include "views/layout/sidebar.php";
+include "views/subjects/_form.php";
+include "views/subjects/_list.php";
 ?>
 
 <?php 
