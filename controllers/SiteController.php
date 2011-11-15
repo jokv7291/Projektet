@@ -1,7 +1,7 @@
 <?php 
 
 require_once 'models/Subjects.php';
-
+require_once 'models/Groups.php';
 
 if (isset($_POST['r'])) {
     $action = $_POST['r'];
@@ -20,7 +20,10 @@ switch ($action) {
 		$subjects = get_subjects();
 		include "views/subjects/index.php";
 		break;
-
+	case 'groups':
+		//$subjects = get_subjects();
+		include "views/groups/index.php";
+		break;
 	
 	
 	

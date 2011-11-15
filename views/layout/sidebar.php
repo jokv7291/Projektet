@@ -8,5 +8,8 @@
 			<li>
                 <a href="index.php?r=subjects">Subjects</a>
             </li>
+			<li>
+                <a href="index.php?r=groups">Groups</a>
+            </li>
         </ul>
     </div>
