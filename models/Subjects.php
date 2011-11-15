@@ -47,4 +47,28 @@ function add_subject($subject_name, $subject_short) {
     $statement->closeCursor();
 	return $db->lastInsertId();
 }
+
+
+function update_subject($subject_id, $subject_name, $subject_short) {
+    global $db;
+    $query = "UPDATE subjects
+        SET subject_name = :name,
+            subject_short = :short
+        WHERE subject_id = :id";
+    try {
+        $statement = $db->prepare($query);
+        $statement->bindValue(':name', $subject_name);
+        $statement->bindValue(':short', $subject_short);
+        $statement->bindValue(':id', $subject_id);
+        $statement->execute();
+        $statement->closeCursor();
+		return true;
+    } catch (PDOException $e) {
+        $error_message = $e->getMessage();
+        return false;
+		//display_db_error($error_message);
+    }
+}
+
+
 ?>
