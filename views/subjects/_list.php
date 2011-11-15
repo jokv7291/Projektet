@@ -13,7 +13,8 @@
 			<td><?php echo $subject['subject_short']; ?></td>
 			<td><?php echo $subject['subject_name']; ?></td>
 			
-			<td><img class="delete" src="images/del.gif" ></td>
+			<td><img class="edit" src="images/edit.gif" >
+				<img class="delete" src="images/del.gif" ></td>
 			</tr>
 			<?php endforeach; ?>
 			</tbody>
