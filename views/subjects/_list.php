@@ -10,8 +10,8 @@
 		<tbody id="table_list">
 		<?php foreach ($subjects as $subject) : ?>
 		<tr id="<?php echo $subject['subject_id']; ?>">
-			<td><?php echo $subject['subject_short']; ?></td>
-			<td><?php echo $subject['subject_name']; ?></td>
+			<td class="short"><?php echo $subject['subject_short']; ?></td>
+			<td class="name"><?php echo $subject['subject_name']; ?></td>
 			
 			<td><img class="edit" src="images/edit.gif" >
 				<img class="delete" src="images/del.gif" ></td>
