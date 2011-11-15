@@ -1,4 +1,8 @@
 <?php
+
+
+//Har funktionerna för subjects dvs add, update och delete.
+
 require_once('../util/main.php');
 require_once 'models/Subjects.php';
 
@@ -6,9 +10,9 @@ require_once 'models/Subjects.php';
 if (isset($_POST['s'])) {
  
   $action = $_POST['s'];
-} else if (isset($_GET['s'])) {
-    $action = $_GET['s'];
-} 
+} // else if (isset($_GET['s'])) {
+//     $action = $_GET['s'];
+// } 
 
 
 switch ($action) {

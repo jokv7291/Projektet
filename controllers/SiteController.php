@@ -1,5 +1,8 @@
 <?php 
 
+//SiteController styr menyn och skapar startvyn för varje vy.
+//Respektive controller styr sedan mha js och modelen resterande funktioner.
+
 require_once 'models/Subjects.php';
 require_once 'models/Groups.php';
 

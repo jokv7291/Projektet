@@ -1,7 +1,8 @@
 
 $(document).ready(function() { 
 	
-	
+	//Delete function kallad av dels den ursprungliga, längst ner, 
+	//och sen för varje nyskapad rad i tabbellen
 	var delete_fn = function(data) {
 		
 		var id = $(data).parent().parent().attr("id");
@@ -26,7 +27,8 @@ $(document).ready(function() {
 				$(data).parent().parent().parent().remove();
 			});
 	}
-
+	
+	//Submit med en nästlad deletefunktion
 	$('#add_subject_form').submit(function() {
 		
 		var kod = $('#code').val();
