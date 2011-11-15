@@ -16,14 +16,18 @@ switch ($action) {
 	case 'add_subject':
 		$name = $_POST['subject_name'];
 		$short = $_POST['subject_short'];
-		$id = add_subject($name, $short);
-		echo $id;
+		
+		if (empty($short) || empty($name)) {
+			 $error = "Invalid product data. Check all fields and try again.";
+			echo $error;
+		} else {
+			$id = add_subject($name, $short);
+			echo $id;
+		}
 		break;
 	case 'delete_subject':
-		$id = 47;//$_POST['subject_id'];
-		$success = 0;
-		$success = delete_subject($id);
-		echo $success;
+		$id = $_POST['subject_id'];
+		delete_subject($id);
 		break;
 	
 	
