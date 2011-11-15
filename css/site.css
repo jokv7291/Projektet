@@ -26,7 +26,17 @@ div#content {
     
 }
 
-
+#sidebar {width: 712px;
+	height:25px;
+	display:block;}
+ul.nav {display:block;
+	position:relative;}
+ul.nav li {display:block;
+	float:left;
+	padding:5px;
+	background-color:grey;
+	}
+ul.nav li a {color:white;}
 
 table tr td {
     border:1px solid black;
