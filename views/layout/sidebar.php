@@ -10,5 +10,8 @@
 			<li>
                 <a href="index.php?r=groups">Groups</a>
             </li>
+			<li>
+                <a href="index.php?r=halls">Halls</a>
+            </li>
         </ul>
     </div>
