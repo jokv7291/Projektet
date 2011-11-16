@@ -38,7 +38,6 @@ switch ($action) {
 		$id = $_POST['subject_id'];
 		$name = $_POST['subject_name'];
 		$short = $_POST['subject_short'];
-		echo $name." ";
 		
 		if (empty($short) || empty($name)) {
 			$error = "Invalid product data. Check all fields and try again.";

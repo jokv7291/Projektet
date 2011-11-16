@@ -54,14 +54,14 @@ $(document).ready(function() {
 			 		subject_short: kort,
 					subject_name: namn
 			 	}, function(data2) {
-					// if (isNaN(data2)) {
-					// 			console.log(data2);	
-					// 		} else {
+					if (isNaN(data2)) {
+							console.log(data2);	
+					} else {
 							console.log(data2);	
 
 					$(data).parent().parent().find('td.short').html(kort);
 					$(data).parent().parent().find('td.name').html(namn);
-				//}
+				}
 	});
 	
 		
