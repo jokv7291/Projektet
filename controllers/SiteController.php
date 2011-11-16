@@ -24,7 +24,7 @@ switch ($action) {
 		include "views/subjects/index.php";
 		break;
 	case 'groups':
-		//$subjects = get_subjects();
+		$subjects = get_groups();
 		include "views/groups/index.php";
 		break;
 	
