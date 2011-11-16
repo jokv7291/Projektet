@@ -1,5 +1,5 @@
 <?php
-//Har funktionerna för halls dvs add, remove, edit, link & unlink.
+//Har funktionerna för halls dvs add, edit, remove, link & unlink.
 
 require_once('../util/main.php');
 require_once 'models/Halls.php';
@@ -47,9 +47,8 @@ switch ($action) {
 		
 	case 'unlink_hall':
 		$id = $_POST['id'];
-		$subject_id = $_POST['subject_id'];
 		
-		unlink_hall($id, $subject_id);
+		unlink_hall($id);
 		break;
 }
 ?>
